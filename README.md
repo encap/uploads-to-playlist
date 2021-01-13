@@ -9,4 +9,8 @@ It seems simple but that operation requires nearly 500 lines of JavaScript thank
 ### Notice
 Due to quota cost of playlist write operations and ratelimitting web app can freeze or reject login attempts.
 
+## Update 2021
+Youtube has changed OAuth policies and blocked unverified apps like this one from public use.
+Please contact me at encapsulation4@gmail.com to get the credentials.
+
 ## Made By Łukasz Wielgus in 2020
