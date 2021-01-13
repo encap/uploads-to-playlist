@@ -7,7 +7,7 @@ const DISCOVERY_DOCS = [
 ];
 const SCOPES = 'https://www.googleapis.com/auth/youtube.force-ssl';
 
-const CLIENT_ID = '601640449238-b68s3fa5mfdupib4vln6o6egdov7724f.apps.googleusercontent.com';
+const CLIENT_ID = '790424446873-b0uml73bjlcql1n178brrpvpure5o6qc.apps.googleusercontent.com';
 
 const quotaLimit = 9500;
 totalQuota.innerText = quotaLimit;
@@ -76,8 +76,13 @@ const updateStatus = async (isSignedIn) => {
 
 const handleLogIn = () => {
   loginBtn.innerText = 'Waiting for authorization...';
-  loginBtn.disabled = true;
-  gapi.auth2.getAuthInstance().signIn();
+
+  handleClientLoad();
+  setTimeout(() => {
+    loginBtn.disabled = true;
+    gapi.auth2.getAuthInstance().signIn();
+  }, 1000)
+
 }
 
 
