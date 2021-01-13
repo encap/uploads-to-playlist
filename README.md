@@ -1,5 +1,6 @@
 # Youtube Uploads To Playlist
 ## Automatically add all channel uploads to the selected playlist
+https://encap.github.io/uploads-to-playlist
 
 Youtube to this day has problems with playing videos from one channel one after the other.
 The major problem with autoplay is that often it jumps to other channels or unrelated videos.
