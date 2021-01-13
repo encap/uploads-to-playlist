@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: calc(100vh - 8em);
+  display: flex;
+  position: relative;
+  margin: 4em 4em;
+  justify-content: space-around;
+  background-color: #212121;
+  font-size: 18px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 35vw;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  width: 40vw;
+  height: 100%;
+}
+
+h2, h3, p {
+  margin-top: 0;
+}
+
+button, input, textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  display: block;
+  font-size: inherit;
+  padding: 5px;
+  background-color:lightgrey;
+  margin-top: 8px;
+}
+
+input:placeholder {
+  color: grey;
+}
+
+#channel {
+  display: none;
+}
+
+.added {
+  color: #f44336;
+}
+
+.skipped {
+  text-decoration: line-through;
+}
+
+button, #playlistsScroll > label {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: inherit;
+  margin-top: 16px;
+  background-color: #f44336;
+  height: 50px;
+  width: 100%;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+button:not([DISABLED]):hover {
+  background-color: #fa5f54;
+}
+
+button:not([DISABLED]):active {
+  transform: scale(.95);
+}
+
+#addBtn, #getBtn, #resetBtn {
+  display: none;
+}
+
+#warning, #info {
+  width: 100%;
+  display: none;
+}
+
+#info {
+  justify-content: space-between;
+}
+
+#warning {
+  margin-top: 40px;
+  align-self: flex-end;
+}
+
+#playlistsContainer {
+  display: none;
+  margin-top: 1em;
+}
+
+#playlistsScroll {
+  max-height: 40vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#playlistsScroll > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #f44336;
+  height: 31px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#playlistsScroll > label:hover {
+  background-color: #fa5f54;
+}
+
+#playlistsScroll > input:checked + label {
+  background-color: #f44336;
+}
+
+#newPlaylistContainer {
+  margin-top: 1em;
+}
+
+#createPlaylistBtn {
+  height: 31px;
+}
+
+#progress {
+  margin: 1em 0;
+  display: none;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+#uploads {
+  flex-grow: 1;
+  max-height: 100%;
+  display: block;
+  overflow-y: auto;
+}
+
+li {
+  margin-top: 8px;
+}

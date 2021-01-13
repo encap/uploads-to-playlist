@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+  <h2>Automatically add all channel uploads to your playlist</h2>
+  
+  <div id="loginContainer">
+    <h3 id="username">Log in to your Youtube account</h3>
+    <button id="loginBtn" onclick="handleLogIn()">Log In</button>
+  </div>
+
+  <div id="channel">
+    <label id="channelIdLabel">Paste here channel id</label>
+    <input type="text" id="channelIdInput" placeholder="24 characters">
+  </div>
+
+  <button id="getBtn" onclick="getVideos()">Get uploads list</button>
+
+  <div id="playlistsContainer">
+    <h4>Select playlist</h4>
+    <div id="playlistsScroll">
+    </div>
+    <div id="newPlaylistContainer">
+      <input type="text" id="newPlaylistName" placeholder="New playlist name">
+      <button id="createPlaylistBtn">Create new</button>
+    </div>
+  </div>
+
+  <button id="addBtn" onclick="add()">Add all to playlist</button>
+
+  <div id="progress">
+    <h2 id="msg"></h2>
+    <h3 id="progressCount"></h3>
+    <h3 id="time"></h3>
+    <h3 id="partTime"></h3>
+  </div>
+
+  <button id="resetBtn" onclick="reset()">Add from next channel</button>
+
+  <div id="warning">
+    <p id="warningText"></p>
+    <div id="warningButtons"></div>
+  </div>
+
+</main>
+<aside>
+  <h3 id="info">
+    <span><span id="videosCount">2</span> videos</span>
+    <span> Used quota: <span id="usedQuota"></span>/<span id="totalQuota"></span></span>
+  </h3>
+  <ol id="uploads"></ol>
+</aside>
+
+<script defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+<script defer src="main.js"></script>
+</script>
+  
+</body>
+</html>
